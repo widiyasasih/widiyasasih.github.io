@@ -1,0 +1,189 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scrollbar-width: none;
+}
+
+.front-page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  clip-path: circle(6%);
+}
+
+.blend {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.intro-text {
+  color: white;
+  z-index: 2;
+}
+
+.intro-text,
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  max-width: 100%;
+  height: auto;
+}
+
+.front-page video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.tag {
+  color: yellow;
+  position: absolute;
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: bold;
+  transform: rotate(-25deg);
+}
+
+@media only screen and (min-width: 320px) {
+  .title {
+    padding-bottom: 1.2rem;
+  }
+
+  .sub-title {
+    font-size: 1.5em;
+    padding-left: 0.5rem;
+  }
+
+  .tag {
+    font-size: 2.5em;
+    right: -4rem;
+    bottom: -0.5rem;
+    margin-bottom: 0rem;
+    line-height: 32px;
+  }
+
+  .second-page h2 {
+    font-size: 2em;
+  }
+
+  .title img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .title {
+    padding-bottom: 0;
+  }
+
+  .tag {
+    font-size: 2em;
+    right: -3rem;
+    bottom: -1.5rem;
+    margin-bottom: 0rem;
+    line-height: 25px;
+  }
+
+  .sub-title {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tag {
+    right: -3rem;
+    bottom: -2rem;
+  }
+
+  .title img {
+    width: 1px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .sub-title {
+    font-size: 1em;
+    padding-left: 0;
+  }
+
+  .second-page h2 {
+    font-size: 2em;
+  }
+}
+
+.info-dev {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.info-dev p {
+  color: rgb(202, 26, 179);
+  opacity: 40%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding: 0.5rem;
+  animation: info-dev 4s infinite;
+  text-align: right;
+  font-size: 0.9em;
+}
+@keyframes info-dev {
+  from {
+    color: rgb(202, 26, 179);
+  }
+  to {
+    color: rgb(12, 206, 148);
+  }
+}
+
+.second-page {
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+}
+
+footer {
+  text-align: center;
+  font-family: "Alice", serif;
+  font-size: 1em;
+  padding: 1%;
+}
+
+footer span {
+  color: #ce3358;
+}
+
+.love {
+  color: #eebdc9;
+  font-size: 0.8em;
+}
