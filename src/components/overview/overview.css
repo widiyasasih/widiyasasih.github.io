@@ -1,0 +1,140 @@
+.overview__container {
+  /* background: green; */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+header {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-header {
+  /* background: purple; */
+  display: flex;
+  flex-direction: row;
+  /* Thumbnail Collapse */
+  width: 100%;
+  /* Thumbnail Expand */
+  /* width: 35%;  */
+}
+
+.logo {
+  /* background: pink; */
+  width: max-content;
+  /* Thumbnail Collapse */
+  padding: 3.3rem;
+  /* Thumbnail Expand */
+  /* padding: 2.9rem; */
+}
+
+.logo > img {
+  width: 100%;
+  max-width: 5rem;
+}
+
+.title-wrapper {
+  /* background: aqua; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  padding: 0rem;
+}
+
+.title {
+  right: 100rem;
+  text-align: right;
+  width: 100%;
+}
+
+.title-cat {
+  text-transform: uppercase;
+}
+
+.title-cat::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 1rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.5rem;
+  background: var(--color-white);
+}
+
+.title-name {
+  text-transform: capitalize;
+}
+
+.container__thumbnail {
+  /* background: gray; */
+  /* Thumbnail Expand */
+  /* width: 100%;  */
+  /* Thumbnail Collapse */
+  width: 35%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.nav-back {
+  position: absolute;
+  z-index: 1;
+  top: 2.5rem;
+  width: 100%;
+  /* background: red; */
+}
+
+.nav-back > a {
+  color: var(--color-white);
+  width: 100%;
+}
+
+.thumbnail {
+  right: 0;
+  background: var(--color-primary);
+  width: 90%;
+  height: 100%;
+}
+
+.container__thumbnail::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 10%;
+  /* background: var(--color-white); */
+}
+
+footer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background: gray; */
+}
+
+.more {
+  height: 100%;
+  width: 35%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-more {
+  width: 10rem;
+  height: max-content;
+  /* background: orange; */
+  margin: 2.5rem;
+}
+
+.whitespace {
+  /* background: white; */
+  width: 100%;
+  height: 100%;
+}

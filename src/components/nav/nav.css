@@ -1,0 +1,23 @@
+.nav__container {
+  width: max-content;
+  height: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  gap: 2rem;
+  /* z-index: 1; */
+  position: fixed;
+}
+
+nav > li,
+h2.title {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 3em;
+}
