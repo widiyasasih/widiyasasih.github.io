@@ -3,6 +3,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
+  /* z-index: -1; */
 }
 
 header {
@@ -16,12 +17,12 @@ header {
   display: flex;
   flex-direction: row;
   /* Thumbnail Collapse */
-  width: 100%;
+  width: fit-content;
   /* Thumbnail Expand */
   /* width: 35%;  */
 }
 
-.logo {
+.left-header > .logo {
   /* background: pink; */
   width: max-content;
   /* Thumbnail Collapse */
@@ -30,9 +31,21 @@ header {
   /* padding: 2.9rem; */
 }
 
-.logo > img {
+.left-header > .logo > img {
   width: 100%;
   max-width: 5rem;
+}
+
+.thumbnail__container {
+  /* background: gray; */
+  /* Thumbnail Expand */
+  /* width: 100%;  */
+  /* Thumbnail Collapse */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
 }
 
 .title-wrapper {
@@ -43,7 +56,15 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 10rem;
-  padding: 0rem;
+  padding: 2rem;
+}
+
+.title-wrapper::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 5%;
+  /* background: var(--color-white); */
 }
 
 .title {
@@ -70,23 +91,20 @@ header {
   text-transform: capitalize;
 }
 
-.container__thumbnail {
-  /* background: gray; */
-  /* Thumbnail Expand */
-  /* width: 100%;  */
-  /* Thumbnail Collapse */
-  width: 35%;
+.thumbnail-wrapper {
+  width: 40%;
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  /* padding-left: 20rem; */
 }
 
 .nav-back {
   position: absolute;
-  z-index: 1;
   top: 2.5rem;
   width: 100%;
-  /* background: red; */
+  background: red;
 }
 
 .nav-back > a {
@@ -97,16 +115,8 @@ header {
 .thumbnail {
   right: 0;
   background: var(--color-primary);
-  width: 90%;
+  width: 100%;
   height: 100%;
-}
-
-.container__thumbnail::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 10%;
-  /* background: var(--color-white); */
 }
 
 footer {
@@ -119,22 +129,22 @@ footer {
 
 .more {
   height: 100%;
-  width: 35%;
-  background: white;
+  width: 100%;
+  background: rgb(255, 254, 244);
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
 .btn-more {
-  width: 10rem;
+  width: fit-content;
   height: max-content;
   /* background: orange; */
   margin: 2.5rem;
 }
 
 .whitespace {
-  /* background: white; */
+  /* background: red; */
   width: 100%;
   height: 100%;
 }

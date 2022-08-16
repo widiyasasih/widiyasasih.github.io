@@ -12,12 +12,6 @@ const Overview = () => {
           <div className='logo'>
             <img src={images[`logo-ws.svg`]} alt='Logo' />
           </div>
-          <div className='title-wrapper'>
-            <div className='title'>
-              <h5 className='title-cat'>Most Epic</h5>
-              <h1 className='title-name'>Portfolio</h1>
-            </div>
-          </div>
         </div>
         <Thumbnail />
       </header>

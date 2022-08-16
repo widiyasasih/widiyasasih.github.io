@@ -17,7 +17,7 @@ const Nav = () => {
           </ol>
         </li>
       </nav>
-      <h2 className='title'>/ Carrot Project j</h2>
+      <h2 className='title'>/ Carrot Project</h2>
       {/* <h2 className='title'>/ Branding </h2> */}
     </div>
   );
