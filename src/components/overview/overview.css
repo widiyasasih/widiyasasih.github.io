@@ -162,7 +162,7 @@ footer {
   /*  */
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   position: relative;
-  z-index: 100;
+  z-index: 1;
   background: inherit;
   overflow: hidden;
 }
@@ -193,11 +193,12 @@ footer {
   height: 100%;
   width: 1.5px;
   margin-left: 2.5rem;
-  background: var(--color-white);
+  background: var(--color-primary-light);
 }
 
 .more-box > .btn {
-  border: 1.5px solid var(--color-white);
+  border: 1.5px solid var(--color-primary-light);
+  color: var(--color-primary-light);
 }
 
 .btn-more {

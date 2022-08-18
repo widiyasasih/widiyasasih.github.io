@@ -1,6 +1,6 @@
 import React from 'react';
 
-const More = () => {
+const Footer = () => {
   return (
     <footer>
       <div className='whitespace'></div>
@@ -16,4 +16,4 @@ const More = () => {
   );
 };
 
-export default More;
+export default Footer;

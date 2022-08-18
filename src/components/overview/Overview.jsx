@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Thumbnail from './Thumbnail';
-import More from './More';
+import Footer from './Footer';
 import './overview.css';
 import images from '../asset/Asset';
 
@@ -10,14 +11,14 @@ const Overview = () => {
       <header>
         <div className='left-header'>
           <div className='logo'>
-            <a href='_blank'>
+            <Link to='/'>
               <img src={images[`logo-ws.svg`]} alt='Logo' />
-            </a>
+            </Link>
           </div>
         </div>
         <Thumbnail />
       </header>
-      <More />
+      <Footer />
     </div>
   );
 };

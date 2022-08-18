@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Overview from './components/overview/Overview';
 import Nav from './components/nav/Nav';
 import Content from './components/content/Content';
@@ -10,9 +11,9 @@ const App = () => {
     <>
       <section className='float-top-bar'>
         <div className='logo'>
-          <a href='_blank'>
+          <Link to='/'>
             <img src={images[`logo-ws.svg`]} alt='Logo' />
-          </a>
+          </Link>
         </div>
         <div className='top-bar-menu'>
           <a href='_blank'>
@@ -20,8 +21,8 @@ const App = () => {
           </a>
         </div>
       </section>
-      <Overview />
       <Nav />
+      <Overview />
       <Content />
     </>
   );
