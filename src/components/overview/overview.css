@@ -20,7 +20,7 @@ header {
 
 .left-header > .logo {
   width: max-content;
-  padding: 3.3rem;
+  padding: 3rem;
 }
 
 .left-header > .logo > a > img {
@@ -77,6 +77,7 @@ header {
 }
 
 .thumbnail-wrapper {
+  /* width: 100%; */
   width: 40%;
   height: 100%;
   display: flex;
@@ -84,20 +85,60 @@ header {
   align-items: flex-start;
   justify-content: flex-start;
 }
-
 .nav-back {
   position: absolute;
-  top: 2.5rem;
-  width: 100%;
+  top: 1rem;
+  left: 16.5rem;
+  width: max-content;
+  /*  */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  /* position: relative; */
+  z-index: 999;
+  background: inherit;
+  overflow: hidden;
 }
 
-.nav-back > a {
-  color: var(--color-white);
+.nav-back::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -5px;
+  display: none;
+}
+
+.nav-back a {
+  /* background: yellow; */
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-white);
+  /* margin: 0; */
+  /* margin: 0.2rem 1rem 0.2rem 1rem; */
+}
+
+.nav-back .btn-back {
+  /* color: var(--color-white); */
+  border: 0;
+  background: none;
+}
+
+.btn-back .icon {
+  /* color: aqua; */
 }
 
 .thumbnail {
   right: 0;
+  /* margin-left: 12rem; */
   background: var(--color-primary);
   width: 100%;
   height: 100%;
@@ -236,10 +277,15 @@ footer {
   }
 
   .thumbnail {
+    margin: 0;
     width: 100%;
   }
 
   .thumbnail-wrapper {
     width: 100%;
+  }
+
+  .nav-back {
+    display: none;
   }
 }
