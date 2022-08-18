@@ -201,7 +201,7 @@ footer {
 }
 
 .btn-more {
-  width: fit-content;
+  /* width: fit-content; */
   height: max-content;
   display: absolute;
   z-index: 1;
@@ -210,6 +210,36 @@ footer {
 .whitespace {
   width: 100%;
   height: 100%;
+}
+
+/* ============== MEDIUM DEVICES ============== */
+@media screen and (max-width: 1024px) {
+  .left-header {
+    padding-left: 1.5rem;
+  }
+
+  .left-header > .logo > a > img {
+    max-width: 4rem;
+  }
+
+  .more-box > .btn-more {
+    writing-mode: vertical-rl;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .more {
+    align-items: flex-start;
+  }
+
+  .more-box {
+    margin-right: 0.6rem;
+  }
+
+  .more-box::before {
+    height: 50%;
+    margin-left: 1rem;
+  }
 }
 
 /* ============== SMALL DEVICES ============== */
