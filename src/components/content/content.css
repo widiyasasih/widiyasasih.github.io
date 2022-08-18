@@ -6,9 +6,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  /* height: max-content; */
   height: 100%;
-  /* z-index: 1; */
+  z-index: 10;
 }
 
 h2.content-title {
@@ -16,7 +15,6 @@ h2.content-title {
 }
 
 .content {
-  /* word-break: break-all; */
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
@@ -28,7 +26,6 @@ h2.content-title {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: var(--color-white-light);
   height: max-content;
-  /* width: max-content; */
   padding: 7%;
 }
 
@@ -36,4 +33,21 @@ h2.content-title {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+/* ============== SMALL DEVICES ============== */
+@media screen and (max-width: 600px) {
+  .content {
+    padding-bottom: 1.3rem;
+    gap: 1.3rem;
+  }
+
+  h2.content-title {
+    margin-bottom: 0.8rem;
+  }
+
+  .content__container {
+    position: relative;
+    top: 15rem;
+  }
 }

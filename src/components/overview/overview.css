@@ -1,9 +1,8 @@
 .overview__container {
-  /* background: green; */
   width: 100%;
   height: 100%;
   position: fixed;
-  /* z-index: -1; */
+  z-index: 1;
 }
 
 header {
@@ -13,43 +12,30 @@ header {
 }
 
 .left-header {
-  /* background: purple; */
   display: flex;
   flex-direction: row;
-  /* Thumbnail Collapse */
   width: fit-content;
-  /* Thumbnail Expand */
-  /* width: 35%;  */
+  height: 100%;
 }
 
 .left-header > .logo {
-  /* background: pink; */
   width: max-content;
-  /* Thumbnail Collapse */
   padding: 3.3rem;
-  /* Thumbnail Expand */
-  /* padding: 2.9rem; */
 }
 
-.left-header > .logo > img {
+.left-header > .logo > a > img {
   width: 100%;
   max-width: 5rem;
 }
 
 .thumbnail__container {
-  /* background: gray; */
-  /* Thumbnail Expand */
-  /* width: 100%;  */
-  /* Thumbnail Collapse */
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  /* align-items: flex-start;
-  justify-content: flex-start; */
 }
 
 .title-wrapper {
-  /* background: aqua; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,7 +50,6 @@ header {
   display: inline-block;
   height: 100%;
   width: 5%;
-  /* background: var(--color-white); */
 }
 
 .title {
@@ -93,18 +78,17 @@ header {
 
 .thumbnail-wrapper {
   width: 40%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  /* padding-left: 20rem; */
 }
 
 .nav-back {
   position: absolute;
   top: 2.5rem;
   width: 100%;
-  background: red;
 }
 
 .nav-back > a {
@@ -117,6 +101,7 @@ header {
   background: var(--color-primary);
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 footer {
@@ -124,27 +109,137 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* background: gray; */
+  background-attachment: fixed;
 }
 
 .more {
   height: 100%;
   width: 100%;
-  /* background: rgb(255, 254, 244); */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
+  /*  */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 100;
+  background: inherit;
+  overflow: hidden;
+}
+
+.more::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.more-box {
+  margin-right: 2.8rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.more-box::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 1.5px;
+  margin-left: 2.5rem;
+  background: var(--color-white);
+}
+
+.more-box > .btn {
+  border: 1.5px solid var(--color-white);
 }
 
 .btn-more {
   width: fit-content;
   height: max-content;
-  /* background: orange; */
-  margin: 2.5rem;
+  display: absolute;
+  z-index: 1;
 }
 
 .whitespace {
-  /* background: red; */
   width: 100%;
   height: 100%;
+}
+
+/* ============== SMALL DEVICES ============== */
+@media screen and (max-width: 600px) {
+  .left-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+  }
+
+  .left-header > .logo {
+    padding: 0;
+  }
+
+  .left-header > .logo > a > img {
+    max-width: 2rem;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .title-wrapper {
+    width: 100%;
+    display: inline-flex;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+  }
+
+  .title-wrapper::before {
+    display: none;
+  }
+
+  .title {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    word-wrap: break-word;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: var(--color-black);
+    text-shadow: 2px 2px 8px rgba(39, 39, 39, 0.39);
+  }
+
+  .title-cat::after {
+    background: var(--color-bg);
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .thumbnail__container {
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumbnail__container::before {
+    display: none;
+  }
+
+  .thumbnail {
+    width: 100%;
+  }
+
+  .thumbnail-wrapper {
+    width: 100%;
+  }
 }

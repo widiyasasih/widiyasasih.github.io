@@ -9,12 +9,12 @@ const Content = () => {
           <h2 className='content-title'>Note: Under Developing</h2>
           <div className='body'>
             <p className=''>
-              Hi, dear visitor! This website purposely for my work portfolio, a
-              bit of my journey, or share my writing. I designs my website from
-              scratch right from the skeleton, how the task flow, whatever I
-              need till the program development just like you see, every
-              progress will coming up on the page and other project will join
-              soon.
+              Hi, dear visitor! This website purposely developed for my work
+              portfolio, a bit of my journey, or share my writing. I designs my
+              website from scratch right from the skeleton, how the task flow,
+              whatever I need till the result web app program just like you see,
+              every progress will coming up on the page and other project will
+              join soon.
             </p>
           </div>
         </div>
@@ -22,9 +22,9 @@ const Content = () => {
           <h2 className='content-title'>Do you know me already?</h2>
           <div className='body'>
             <p className=''>
-              I am not famous yet, okay 😁. Just an ordinary lady trying to
-              living my life for the best of me. Just call me <b>Widiya</b>,
-              though I have many pseudonym, ups.
+              Of course you may didn't know me. I am not that famous, okay 😁.
+              Just an ordinary lady trying to living my life for the best of me.
+              Just call me <b>Widiya</b>, though I have many pseudonym, ups.
             </p>
             <p className=''>
               So I have many fields in my plate. I do programming and UI

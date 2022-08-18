@@ -13,7 +13,7 @@ const Thumbnail = () => {
           </div>
         </div>
         <div className='thumbnail-wrapper'>
-          <div className='nav-back hidden'>
+          <div className='nav-back'>
             <a href='_blank'>
               <AiOutlineSwapLeft size={70} />
             </a>

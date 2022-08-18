@@ -1,6 +1,7 @@
 .nav__container {
   width: max-content;
-  height: 100%;
+  height: max-content;
+  bottom: 0;
   /* background-color: yellow; */
   display: flex;
   flex-direction: row;
@@ -10,6 +11,7 @@
   gap: 2rem;
   /* z-index: 1; */
   position: fixed;
+  z-index: 100;
 }
 
 nav > li,
@@ -20,4 +22,11 @@ h2.title {
   flex-direction: row;
   align-items: flex-end;
   gap: 3em;
+}
+
+/* ============== SMALL DEVICES ============== */
+@media screen and (max-width: 600px) {
+  .nav__container {
+    display: none;
+  }
 }

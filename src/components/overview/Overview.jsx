@@ -10,7 +10,9 @@ const Overview = () => {
       <header>
         <div className='left-header'>
           <div className='logo'>
-            <img src={images[`logo-ws.svg`]} alt='Logo' />
+            <a href='_blank'>
+              <img src={images[`logo-ws.svg`]} alt='Logo' />
+            </a>
           </div>
         </div>
         <Thumbnail />

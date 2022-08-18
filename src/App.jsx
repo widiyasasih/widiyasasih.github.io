@@ -10,7 +10,9 @@ const App = () => {
     <>
       <section className='float-top-bar'>
         <div className='logo'>
-          <img src={images[`logo-ws.svg`]} alt='Logo' />
+          <a href='_blank'>
+            <img src={images[`logo-ws.svg`]} alt='Logo' />
+          </a>
         </div>
         <div className='top-bar-menu'>
           <a href='_blank'>
