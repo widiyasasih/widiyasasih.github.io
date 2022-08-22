@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { CgMenuRight, CgClose } from 'react-icons/cg';
+import { links } from './data';
 import Overview from './components/overview/Overview';
 import Nav from './components/nav/Nav';
 import Content from './components/content/Content';
 import images from '../src/components/asset/Asset';
-import { CgMenuRight } from 'react-icons/cg';
-import { links } from './data';
 
 const App = () => {
-  const menu = document.querySelector('.nav-links');
-  const openNavMenu = document.querySelector('#open-nav-btn');
-  const closeNavMenu = document.querySelector('');
+  const [isNavShowing, setNavShowing] = useState(false);
 
   return (
     <>
@@ -21,11 +20,11 @@ const App = () => {
           </Link>
         </div>
         <div className='top-bar-btn'>
-          <a id='open-nav-btn' href='#home' onclick={openTopNav}>
-            <CgMenuRight size={24} />
-          </a>
+          <button onClick={() => setNavShowing(!isNavShowing)}>
+            {isNavShowing ? <CgClose size={24} /> : <CgMenuRight size={24} />}
+          </button>
         </div>
-        <ul className='nav-links'>
+        <ul className={`nav-links ${isNavShowing ? 'show-nav' : 'hide-nav'}`}>
           {links.map(({ name, path }, index) => {
             return (
               <li>
