@@ -1,60 +1,51 @@
 import React from 'react';
-import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import './nav.css';
+// import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { TbSmartHome } from 'react-icons/tb';
 import { SiAboutdotme } from 'react-icons/si';
 import { RiServiceLine } from 'react-icons/ri';
 import { BiNetworkChart } from 'react-icons/bi';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
+import './nav.css';
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('');
+  // const [activeNav, setActiveNav] = useState('');
 
-  const usePathname = () => {
-    const location = useLocation();
-    return location.pathname;
-  };
+  // const getLocation = (r) => (activeNav === r ? 'active' : '');
 
   return (
     <div className='nav__container'>
       <nav className='nav'>
-        <Link
+        <NavLink
           to='/'
-          onClick={() => setActiveNav('')}
-          className={activeNav === '' ? 'active' : ''}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <TbSmartHome />
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/about'
-          onClick={() => setActiveNav('about')}
-          className={activeNav === 'about' ? 'active' : ''}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <SiAboutdotme />
-        </Link>
-        <Link
-          to='/skillset'
-          onClick={() => setActiveNav('skillset')}
-          className={activeNav === 'skillset' ? 'active' : ''}
+        </NavLink>
+        <NavLink
+          to='/experience'
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <RiServiceLine />
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/network'
-          onClick={() => setActiveNav('network')}
-          className={activeNav === 'network' ? 'active' : ''}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <BiNetworkChart />
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/cv'
-          onClick={() => setActiveNav('cv')}
-          className={activeNav === 'cv' ? 'active' : ''}
+          className={({ isActive }) => (isActive ? 'active' : '')}
         >
           <AiOutlineCloudDownload />
-        </Link>
+        </NavLink>
       </nav>
       {/* <h2 className='title hidden'>/ Carrot Project</h2> */}
       {/* <h2 className='title'>/ Branding </h2> */}

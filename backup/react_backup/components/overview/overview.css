@@ -1,0 +1,322 @@
+.overview__container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+header {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-header {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: 100%;
+}
+
+.left-header > .logo {
+  width: max-content;
+  padding: 3rem;
+}
+
+.left-header > .logo > a > img {
+  width: 100%;
+  max-width: 5rem;
+}
+
+.thumbnail__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem;
+}
+
+.title-wrapper::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 5%;
+}
+
+.title {
+  right: 100rem;
+  text-align: right;
+  width: 100%;
+}
+
+.title-cat {
+  text-transform: uppercase;
+}
+
+.title-cat::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 1rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.5rem;
+  background: var(--color-white);
+}
+
+.title-name {
+  text-transform: capitalize;
+}
+
+.thumbnail-wrapper {
+  /* width: 100%; */
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.nav-back {
+  position: absolute;
+  top: 1rem;
+  left: 16.5rem;
+  width: max-content;
+  /*  */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  /* position: relative; */
+  z-index: 999;
+  background: inherit;
+  overflow: hidden;
+}
+
+.nav-back::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -5px;
+  display: none;
+}
+
+.nav-back a {
+  /* background: yellow; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-white);
+  /* margin: 0; */
+  /* margin: 0.2rem 1rem 0.2rem 1rem; */
+}
+
+.nav-back .btn-back {
+  /* color: var(--color-white); */
+  border: 0;
+  background: none;
+}
+
+.btn-back .icon {
+  /* color: aqua; */
+}
+
+.thumbnail {
+  right: 0;
+  /* margin-left: 12rem; */
+  background: var(--color-primary);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+footer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-attachment: fixed;
+}
+
+.more {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /*  */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.more::before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.more-box {
+  margin-right: 2.8rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.more-box::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 1.5px;
+  margin-left: 2.5rem;
+  background: var(--color-primary-light);
+}
+
+.more-box > .btn {
+  border: 1.5px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+}
+
+.btn-more {
+  /* width: fit-content; */
+  height: max-content;
+  display: absolute;
+  z-index: 1;
+}
+
+.whitespace {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============== MEDIUM DEVICES ============== */
+@media screen and (max-width: 1024px) {
+  .left-header {
+    padding-left: 1.5rem;
+  }
+
+  .left-header > .logo > a > img {
+    max-width: 4rem;
+  }
+
+  .more-box > .btn-more {
+    writing-mode: vertical-rl;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .more {
+    align-items: flex-start;
+  }
+
+  .more-box {
+    margin-right: 0.6rem;
+  }
+
+  .more-box::before {
+    height: 50%;
+    margin-left: 1rem;
+  }
+}
+
+/* ============== SMALL DEVICES ============== */
+@media screen and (max-width: 600px) {
+  .left-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+  }
+
+  .left-header > .logo {
+    padding: 0;
+  }
+
+  .left-header > .logo > a > img {
+    max-width: 2rem;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .title-wrapper {
+    width: 100%;
+    display: inline-flex;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+  }
+
+  .title-wrapper::before {
+    display: none;
+  }
+
+  .title {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    word-wrap: break-word;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: var(--color-black);
+    text-shadow: 2px 2px 8px rgba(39, 39, 39, 0.39);
+  }
+
+  .title-cat::after {
+    background: var(--color-bg);
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .thumbnail__container {
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumbnail__container::before {
+    display: none;
+  }
+
+  .thumbnail {
+    margin: 0;
+    width: 100%;
+  }
+
+  .thumbnail-wrapper {
+    width: 100%;
+  }
+
+  .nav-back {
+    display: none;
+  }
+}

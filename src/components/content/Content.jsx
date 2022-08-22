@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import './content.css';
-import Skillset from './Skillset';
+import Experience from './Experience';
 import Network from './Network';
 import CV from './CV';
 
@@ -14,7 +14,7 @@ const Content = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/skillset' element={<Skillset />} />
+          <Route path='/experience' element={<Experience />} />
           <Route path='/network' element={<Network />} />
           <Route path='/cv' element={<CV />} />
         </Routes>

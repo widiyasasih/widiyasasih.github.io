@@ -14,28 +14,10 @@ const Home = () => {
             every progress will coming up on the page and other project will
             join soon.
           </p>
-        </div>
-      </div>
-      <div className='card'>
-        <h2 className='content-title'>Do you know me already?</h2>
-        <div className='body'>
-          <p className=''>
-            Of course you may didn't know me. I am not that famous, okay 😁.
-            Just an ordinary lady trying to living my life for the best of me.
-            Just call me <b>Widiya</b>, though I have many pseudonym, ups.
-          </p>
-          <p className=''>
-            So I have many fields in my plate. I do programming and UI Designer
-            (including experience researcher) since I have Bachelor's degree for
-            those. And I love doing digital painting, illustration, and also
-            done some design work for branding needs like poster, social media
-            promotion (feed or story; I usually take this job for freelance),
-            flyer, banner, and more.
-          </p>
           <p>
-            Contact my email for any further :<br></br>
-            {''}
-            <b>widiyasasih[at]gmail.com</b>
+            I really obsessed with visual aesthetic, hope I can win CSS Award
+            for making an awesome website, that's being said should take a bunch
+            of time and effort, but I enjoy it!
           </p>
         </div>
       </div>

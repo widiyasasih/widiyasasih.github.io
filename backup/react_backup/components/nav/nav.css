@@ -1,0 +1,80 @@
+.nav__container {
+  width: fit-content;
+  height: 75%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0rem 3rem 3rem 3rem;
+  position: fixed;
+  z-index: 100;
+  /* background: yellow; */
+}
+
+nav.nav {
+  width: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav.nav::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 6.5rem;
+  margin-left: 0.1rem;
+  background: var(--color-primary-dark);
+}
+
+nav a {
+  width: max-content;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--color-primary-dark);
+}
+
+nav a.active:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+}
+
+a.active {
+  transition: var(--transition);
+  background: var(--color-white);
+  color: var(--color-bg);
+}
+
+/* ============== MEDIUM DEVICES ============== */
+@media screen and (max-width: 1024px) {
+  .nav__container {
+    padding: 0rem 0rem 3rem 0.2rem;
+    height: 80%;
+  }
+
+  nav.nav {
+    width: 3rem;
+    gap: 2.2rem;
+  }
+
+  nav.nav::before {
+    display: none;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
+}
+
+/* ============== SMALL DEVICES ============== */
+@media screen and (max-width: 600px) {
+  .nav__container {
+    display: none;
+  }
+}
