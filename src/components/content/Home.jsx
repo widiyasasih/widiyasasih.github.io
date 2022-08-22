@@ -16,8 +16,8 @@ const Home = () => {
           </p>
           <p>
             I really obsessed with visual aesthetic, hope I can win CSS Award
-            for making an awesome website, that's being said should take a bunch
-            of time and effort, but I enjoy it!
+            for making an awesome website, may Allah blessed me. That's being
+            said should take a bunch of time and efforts, but it's exciting!
           </p>
         </div>
       </div>

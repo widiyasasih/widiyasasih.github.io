@@ -17,11 +17,14 @@ const About = () => {
             those. And I love doing digital painting, illustration, and also
             done some design work for branding needs like poster, social media
             promotion (feed or story; I usually take this job for freelance),
-            flyer, banner, and more.
+            flyer, banner, and more. Beside under remote or freelance working
+            mode, I sometime done those for volunteering, if someone asking
+            w.h.y I did that, well tbh is to heal and keep up my social
+            behavior. It's nice 😁.
           </p>
           <p>
-            Contact my email for any further :<br></br>
-            {''}
+            Okay enough with this talkie. I will after for the better progress.
+            Contact my email to react me :<br></br>
             <b>widiyasasih[at]gmail.com</b>
           </p>
         </div>
